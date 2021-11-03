@@ -1,0 +1,17 @@
+# Cache
+__pycache__/
+
+# Logs
+*.log
+
+# RSA Key Files
+*_rsa
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
