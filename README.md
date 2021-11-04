@@ -1,11 +1,13 @@
 # SSH Honeypot
 ```diff
-- Warning: This server hasn't been tested in production
+- Warning: This server hasn't been tested in production.
 - Please consider this before running it in a real environment.
 ```
 Small SSH Honeypot written in Python 3 using the Paramiko library. This server listens for incoming connections and logs in a file the timestamp, IP address, username and password that were used.
 
 **NOTE:** This server is designed so that no credentials can return a TTY or a valid SSH session.
+
+![](media/demo.gif)
 
 ## Dependencies
 No need for a `requirements.txt` file here,  because only one dependency is required.
