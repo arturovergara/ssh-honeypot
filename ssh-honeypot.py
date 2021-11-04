@@ -160,10 +160,10 @@ def parse_args(args=sys.argv[1:]):
     # Optional arguments
     parser.add_argument('-l', '--list-banners', action='store_true', help='List available banners to use')
     parser.add_argument('-b', '--banner', metavar='INDEX', type=int, choices=range(len(BANNERS)), help='Specify banner index to use from the list (default: 8)')
-    parser.add_argument('-B', '--banner-string', metavar='STRING', type=str, help='Specify custom banner to use')
+    parser.add_argument('-B', '--banner-string', metavar='STRING', type=str, help='Specify a custom banner to use')
     parser.add_argument('-f', '--file', metavar='RSA_FILE', type=argparse.FileType('r'), help='RSA key file to use. If it is not specified, a new one is dynamically generated')
-    parser.add_argument('-n', '--number', metavar='MAX_NUMBER', type=IntRange(min=1), default=10, help='Number of max connections (default: 10)')
-    parser.add_argument('-o', '--output', metavar='LOG_FILE', type=argparse.FileType('a'), help='Specify log file to append (default: ./ssh-honeypot.log)')
+    parser.add_argument('-n', '--number', metavar='MAX_NUMBER', type=IntRange(min=1), default=10, help='Number of max connections to listen (default: 10)')
+    parser.add_argument('-o', '--output', metavar='LOG_FILE', type=argparse.FileType('a'), help='Specify a log file to append the records (default: ./ssh-honeypot.log)')
     parser.add_argument('-p', '--port', type=IntRange(1, 65535), default=2222, help='Listen port (default: 2222)')
 
     return parser.parse_args(args)
